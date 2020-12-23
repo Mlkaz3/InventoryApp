@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/Inventory"
+            android:title="Inventory"
+            android:icon="@drawable/inventory"/>
+        <item
+            android:id="@+id/UpdateInventory"
+            android:title="Update Inventory"
+            android:icon="@drawable/update"/>
+        <item
+            android:id="@+id/StockChecking"
+            android:title="Stock Checking"
+            android:icon="@drawable/check"/>
+        <item
+            android:id="@+id/StockUsage"
+            android:title="Stock Usage"
+            android:icon="@drawable/usage"/>
+        <item
+            android:id="@+id/History"
+            android:title="History"
+            android:icon="@drawable/history"/>
+    </group>
+
+</menu>
