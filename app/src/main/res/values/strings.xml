@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+    <string name="main_text">Slide for menu to start manage inventory.</string>
+    <string name="title">Toast &amp; Drink Inventory Management</string>
 </resources>
