@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -39,28 +38,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="255dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/main_text"
-            android:textColor="#070707"
-            android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80sp"
-            app:srcCompat="@drawable/backgroud" />
+    </FrameLayout>
 
-    </LinearLayout>
 
 </LinearLayout>
