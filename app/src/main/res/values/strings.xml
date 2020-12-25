@@ -2,6 +2,8 @@
     <string name="app_name">InventoryApp</string>
     <string name="main_text">Slide for menu to start manage inventory.</string>
     <string name="title">Toast &amp; Drink Inventory Management</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inventory_fragment">Below shows the latest inventory.\nLast update on 22/12/2020 07:36:23PM.</string>
+    <string name="update_inventory_fragment">Please select a choice.</string>
+    <string name="stock_checking_fragment">Fill up the info and press the “START” button to start stock checking function.</string>
+    <string name="stock_usage_fragment">Please select a start date and end data to check for stock usage.</string>
 </resources>

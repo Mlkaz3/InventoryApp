@@ -1,10 +1,15 @@
 package com.example.inventoryapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.inventoryapp.Adapter.ItemAdapter
+import com.example.inventoryapp.Object.Item
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,18 +26,51 @@ class InventoryFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var adapter: ItemAdapter
+    lateinit var item: ArrayList<Item>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
         }
+        //initialise
+        item = ArrayList<Item>()
+        item.add(Item("https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "coffee bean",12.5,"kg"))
+
+        Log.e("winnie",item.toString())
+        Log.e("winnie","onCreate inventory fragment running")
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inventory, container, false)
+
+
+        // inflate the view first, then initialize/bind the RecyclerView
+        val view: View = inflater.inflate(R.layout.fragment_inventory, container, false)
+
+        Log.e("winnie","onCreateView inventory fragment running")
+
+        // return the layout for this fragment
+        return view
+    }
+
+    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(itemView, savedInstanceState)
+
+        Log.e("winnie","onViewCreated inventory fragment running")
+
+        // RecyclerView node initialized here
+        val recyclerview: RecyclerView = itemView.findViewById(R.id.inventory_rv)
+        recyclerview.layoutManager = LinearLayoutManager(activity)
+        adapter = ItemAdapter(activity,item)
+        recyclerview.adapter = adapter
+
+
     }
 
     companion object {
